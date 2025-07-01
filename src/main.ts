@@ -1,18 +1,17 @@
 import Phaser from 'phaser';
 import GameScene from './scenes/GameScene.ts';
+import './style.css';
 
-const config: Phaser.Types.Core.GameConfig = {
+const config = {
   type: Phaser.AUTO,
-  width: 800,
-  height: 600,
-  backgroundColor: '#000000', // black background
-  scene: [GameScene],
+  width: 1200,
+  height: 700,
+  parent: 'game-container',  // This must match your div id
   physics: {
     default: 'arcade',
-    arcade: {
-      debug: false,
-    },
+    arcade: { debug: false },
   },
+  scene: [GameScene],
 };
 
-new Phaser.Game(config);
+const game = new Phaser.Game(config);
