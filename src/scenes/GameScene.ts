@@ -37,7 +37,7 @@ export default class GameScene extends Phaser.Scene {
 
     this.setCollision(treesLayer);
 
-    this.setCamera(map); // smooth but snappy
+    this.setCamera(map);
 
     this.initCursors();
 

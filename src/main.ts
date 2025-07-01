@@ -12,8 +12,15 @@ const config = {
     default: 'arcade',
     arcade: { debug: false },
   },
-  pixelArt: true,    // <--- ADD THIS
+  pixelArt: true,
   scene: [GameScene, FightScene],
+
+  scale: {
+    mode: Phaser.Scale.FIT,             // Scale to fit while maintaining aspect ratio
+    autoCenter: Phaser.Scale.CENTER_BOTH, // Center horizontally and vertically
+    width: 1200,
+    height: 700,
+  },
 };
 
 const game = new Phaser.Game(config);
