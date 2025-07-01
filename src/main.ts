@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import GameScene from './scenes/GameScene.ts';
+import FightScene from './scenes/FightScene.ts';
 import './style.css';
 
 const config = {
@@ -11,7 +12,8 @@ const config = {
     default: 'arcade',
     arcade: { debug: false },
   },
-  scene: [GameScene],
+  pixelArt: true,    // <--- ADD THIS
+  scene: [GameScene, FightScene],
 };
 
 const game = new Phaser.Game(config);
